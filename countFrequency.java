@@ -1,63 +1,47 @@
-/*
-Counting frequencies of array elements
+/* 
+Given an array arr[] of positive integers which may contain duplicate elements, return the frequency of each distinct element.
 
-Given an array arr[] of non-negative integers which may contain duplicate elements. Return the frequency of each distinct element present in the array.
+Examples:
 
-Examples: 
-
-Input:  arr[] = [10, 20, 10, 5, 20]
-Output: [[5, 1], [10, 2], [20, 2]]
-Explanation: Here 5 occurs once, 10 occurs 2 times and 20 occurs 2 times.
-
-Input: arr[] = [10, 20, 20]
-Output: [[10, 1], [20, 2]] 
-Explanation: Here 10 occurs 1 time, 20 occurs 2 times. 
+Input: arr[] = [1, 2, 2, 3, 3, 5]
+Output: [[1, 1], [2, 2], [3, 2], [5, 1]]
+Explaiantion: Here element 1 and 5 occur 1 times, 2 and 3 occur 2 times.
+Input: arr[] = [1, 5, 6, 7, 7]
+Output: [[1, 1], [5, 1], [6, 1], [7, 2]]
+Explanation: Here element 1, 5 and 6 occur 1 times, 7 occur 2 times.
 */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class countFrequency {
-    class Solution {
+class countFrequency {
     public ArrayList<ArrayList<Integer>> countFreq(int[] arr) {
         // code here
         int n = arr.length;
         
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+        
         Arrays.sort(arr);
         
-        ArrayList<ArrayList<Integer>> newArr = new ArrayList<>();
-        
-        int i=0;
-        int j=i+1;
+        int i = 0;
+        int j = 1;
         int count = 1;
-        
         while(j<n){
             if(arr[i]==arr[j]){
                 j++;
                 count++;
             }
             else{
-                ArrayList<Integer> res = new ArrayList<>();
-                res.add(arr[i]);
-                res.add(count);
-                newArr.add(res);
-                
+                ArrayList<Integer> inner = new ArrayList<>();
+                inner.add(arr[i]);
+                inner.add(count);
+                list.add(inner);
                 i = j;
                 j = i+1;
-                count=1;
+                count = 1;
             }
         }
-        
-        ArrayList<Integer> res = new ArrayList<>();
-        res.add(arr[i]);
-        res.add(count);
-        newArr.add(res);
-        
-        return newArr;
-
-        //Optimization would be done through Hashmap
+        ArrayList<Integer> inner = new ArrayList<>();
+        inner.add(arr[i]);
+        inner.add(count);
+        list.add(inner);
+        return list;
     }
 }
-}
-
-/*HASHMAP is required for its optimized solution*/
