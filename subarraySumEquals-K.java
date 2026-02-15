@@ -28,4 +28,7 @@ class subarraySumEquals-K{
             }
         }
         return count;
+    }
 }
+
+/*HASHMAP is required for its optimized solution*/

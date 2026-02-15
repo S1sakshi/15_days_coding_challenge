@@ -38,4 +38,51 @@ public class min_max {
     
 }
 
+/*Better solution*/
+
+class Solution {
+    public ArrayList<Integer> getMinMax(int[] arr) {
+        // code Here
+        int n = arr.length;
+        
+        int i = 0;
+        int min = 0;
+        int max = 0;
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        if(n%2==1){
+            min = arr[0];
+            max = arr[0];
+            i = 1;
+        }
+        else{
+            if(arr[0]<arr[1]){
+                min = arr[0];
+                max = arr[1];
+            }
+            else{
+                min = arr[1];
+                max = arr[0];
+            }
+            i = 2;
+        }
+        while(i<n-1){
+            if(arr[i]<arr[i+1]){
+                min = Math.min(arr[i], min);
+                max = Math.max(arr[i+1], max);
+            }
+            else{
+                min = Math.min(arr[i+1], min);
+                max = Math.max(arr[i], max);
+            }
+            i = i+2;
+        }
+        list.add(min);
+        list.add(max);
+        return list;
+    }
+}
+
+
 /*GREEDY ALGORITHM is required for its optimized solution*/
