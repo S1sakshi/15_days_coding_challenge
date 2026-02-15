@@ -30,7 +30,8 @@ public class majorityElement {
         return arr[n/2];
     }
 }
-//Optimal solution
+
+//Optimal solution(Boyer–Moore Voting Algorithm)
 public class majorityElement {
     public int majorityElement(int[] arr) {
         int n = arr.length;
