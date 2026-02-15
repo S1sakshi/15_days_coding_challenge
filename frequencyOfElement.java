@@ -16,11 +16,9 @@ Output: [[1, 1], [5, 1], [6, 1], [7, 2]]
 Explanation: Here element 1, 5 and 6 occur 1 times, 7 occur 2 times.
 */
 
-cl
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
+public class frequencyOfElement{
+    public ArrayList<ArrayList<Integer>> countFreq(int[] arr) {
         // code here
         int n = arr.length;
         
@@ -53,3 +51,5 @@ import java.util.Arrays;
         return list;
     }
 }
+
+/*HASHMAP is required for its optimized solution*/

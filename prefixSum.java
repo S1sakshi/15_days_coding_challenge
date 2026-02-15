@@ -22,7 +22,6 @@ prefixSum[1] = 30 + 10 = 40,
 prefixSum[2] = 30 + 10 + 10 = 50 and so on.
 */
 
-import java.util.ArrayList;
 
 public class prefixSum {
     public ArrayList<Integer> prefSum(int[] arr) {
