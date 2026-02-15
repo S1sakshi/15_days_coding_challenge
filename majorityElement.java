@@ -35,16 +35,15 @@ public class majorityElement {
     public int majorityElement(int[] arr) {
         int n = arr.length;
 
-        int votes = 1;
-        int majority = arr[0];
+        int votes = 0;
+        int majority = 0;
 
-        for(int i=1; i<n; i++){
+        for(int i=0; i<n; i++){
+            if(votes==0){
+                majority = arr[i];
+            }
             if(majority==arr[i]){
                 votes++;
-            }
-            else if(majority!=arr[i] && votes==1){
-                majority = arr[i];
-                votes = 1;
             }
             else{
                 votes--;
