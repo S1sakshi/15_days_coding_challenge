@@ -1,3 +1,8 @@
+/*
+Frequency of Elements
+https://www.geeksforgeeks.org/counting-frequencies-of-array-elements/
+*/
+
 /* 
 Given an array arr[] of positive integers which may contain duplicate elements, return the frequency of each distinct element.
 
@@ -11,8 +16,11 @@ Output: [[1, 1], [5, 1], [6, 1], [7, 2]]
 Explanation: Here element 1, 5 and 6 occur 1 times, 7 occur 2 times.
 */
 
-class frequencyOfElement {
-    public ArrayList<ArrayList<Integer>> countFreq(int[] arr) {
+cl
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
         // code here
         int n = arr.length;
         

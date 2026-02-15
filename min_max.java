@@ -1,3 +1,8 @@
+/*
+Find Min & Max in Array
+https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
+*/
+
 /*Maximum and minimum of an array using minimum number of comparisons
 
 Given an array of integers arr[], the task is to find the maximum and minimum elements in the array using the minimum number of comparisons.
@@ -13,8 +18,7 @@ Output: [3, 35]
 Explanation: The minimum element is 3, and the maximum element is 35.
 */
 
-public class min_max {
-
+class Solution {
     public static int[] min_and_max(int arr[]){
         int n = arr.length; 
 
